@@ -9,6 +9,10 @@ The application uses Nginx running inside a Docker container to serve a custom H
 
 ---
 
+# Implementation Video 
+
+https://screenrec.com/share/4MKrnvfVRg
+
 # Objectives
 
 - Docker containerization basics
@@ -80,8 +84,8 @@ cd CodeAlpha_DockerWebServer
 ```bash
 docker build -t codealpha-webserver .
 ```
+![alt text](screenshots/image2.png)
 
----
 
 ## 3. Run Container with Docker Compose
 
@@ -96,6 +100,7 @@ docker compose up -d
 ```bash
 docker ps
 ```
+![alt text](screenshots/image.png)
 
 ---
 
@@ -104,10 +109,10 @@ docker ps
 Open your browser and visit:
 
 ```bash
-http://localhost:8080
+http://IP:8080
 ```
+![alt text](screenshots/image3.png)
 
----
 
 # Monitoring and Troubleshooting
 
@@ -122,8 +127,9 @@ docker inspect --format='{{json .State.Health}}' codealpha-webserver
 ## View Logs
 
 ```bash
-docker logs codealpha-webserver
+docker logs codealpha-container
 ```
+![alt text](screenshots/image4.png)
 
 
 
